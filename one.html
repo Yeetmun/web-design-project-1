@@ -73,6 +73,7 @@
 
         .accordion-button:not(.collapsed) {
             background-color: AntiqueWhite;
+            color: black;
         }
 
         .accordion-body {
@@ -98,83 +99,295 @@
                But good contrast is no good if users can't find the things they need in the first place! This is an issue that can very easily appear if you have a website with a lot of menus or elements on the page at the
                same time, but this can also be used maliciously to hide something in order to make more money off of users. Don't do that!
             </p>
-            <div class="accordion">
+            <div class="accordion" id="parent">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            What next?
+                            What now?
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" style="border-top: 1px solid black">
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#parent" style="border-top: 1px solid black">
                         <div class="accordion-body">
-                            <p>
-                                One
-                            </p>
+                            <div class="accordion" id="childOne">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerOneOne" aria-expanded="false" aria-controls="innerOneOne">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerOneOne" class="accordion-collapse collapse" data-bs-parent="#childOne" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Tough luck, not here, try again!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerOneTwo" aria-expanded="false" aria-controls="innerOneTwo">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerOneTwo" class="accordion-collapse collapse" data-bs-parent="#childOne" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Ooh! You were this close! But not quite
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerOneThree" aria-expanded="false" aria-controls="innerOneThree">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerOneThree" class="accordion-collapse collapse" data-bs-parent="#childOne" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Ah not this one clearly
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            What next?
+                            What now?
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" style="border-top: 1px solid black">
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#parent" style="border-top: 1px solid black">
                         <div class="accordion-body">
-                            <p>
-                                Two
-                            </p>
+                            <div class="accordion" id="childTwo">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerTwoOne" aria-expanded="false" aria-controls="innerTwoOne">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerTwoOne" class="accordion-collapse collapse" data-bs-parent="#childTwo" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Oh I was so certain it would be here!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerTwoTwo" aria-expanded="false" aria-controls="innerTwoTwo">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerTwoTwo" class="accordion-collapse collapse" data-bs-parent="#childTwo" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Gah!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerTwoThree" aria-expanded="false" aria-controls="innerTwoThree">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerTwoThree" class="accordion-collapse collapse" data-bs-parent="#childTwo" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Doh!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What next?
+                            What now?
                         </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" style="border-top: 1px solid black">
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#parent" style="border-top: 1px solid black">
                         <div class="accordion-body">
-                            <p>
-                                Three
-                            </p>
+                            <div class="accordion" id="childThree">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerThreeOne" aria-expanded="false" aria-controls="innerThreeOne">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerThreeOne" class="accordion-collapse collapse" data-bs-parent="#childThree" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                It has to be around here somewhere
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerThreeTwo" aria-expanded="false" aria-controls="innerThreeTwo">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerThreeTwo" class="accordion-collapse collapse" data-bs-parent="#childThree" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Well we're over halfway at least (unless you didn't start from the top)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerThreeThree" aria-expanded="false" aria-controls="innerThreeThree">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerThreeThree" class="accordion-collapse collapse" data-bs-parent="#childThree" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                HA I GO- oh, it's not this one either
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            What next?
+                            What now?
                         </button>
                     </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" style="border-top: 1px solid black">
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#parent" style="border-top: 1px solid black">
                         <div class="accordion-body">
-                            <p>
-                                Four
-                            </p>
+                            <div class="accordion" id="childFour">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerFourOne" aria-expanded="false" aria-controls="innerFourOne">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerFourOne" class="accordion-collapse collapse" data-bs-parent="#childFour" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Grrrrrrrrrr, I'll find you
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerFourTwo" aria-expanded="false" aria-controls="innerFourTwo">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerFourTwo" class="accordion-collapse collapse" data-bs-parent="#childFour" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Hey it's me! You found it! That was horrible wasn't it? Imagine if something far more important was hidden like that, maybe an option to change your settings or delete your account. That would be an example of malicious design, intentionally 
+                                                making it harder for people to do what they want. It would almost be equally as bad if this were, say, a checkout button. Nobody is going to spend ages looking through menus just to buy something or see the main content of your site.
+                                                So make sure the <em>important</em> things are easily visible and up front. Like this button that allows you to proceed!
+                                                <br><br><br>
+                                                <a class="btn btn-custom onwards justify-content-center" href="two.html">I'll be sure to do that</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerFourThree" aria-expanded="false" aria-controls="innerFourThree">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerFourThree" class="accordion-collapse collapse" data-bs-parent="#childFour" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                This is preposterous!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            What next?
+                            What now?
                         </button>
                     </h2>
-                    <div id="collapseFive" class="accordion-collapse collapse" style="border-top: 1px solid black">
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#parent" style="border-top: 1px solid black">
                         <div class="accordion-body">
-                            <p>
-                                Five
-                            </p>
+                            <div class="accordion" id="childFive">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerFiveOne" aria-expanded="false" aria-controls="innerFiveOne">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerFiveOne" class="accordion-collapse collapse" data-bs-parent="#childFive" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                you should take a look at this source code it's so well organized yet so utterly unreadable
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerFiveTwo" aria-expanded="false" aria-controls="innerFiveTwo">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerFiveTwo" class="accordion-collapse collapse" data-bs-parent="#childFive" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                The penultimate one! From the top, that is
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerFiveThree" aria-expanded="false" aria-controls="innerFiveThree">
+                                            Maybe here?
+                                        </button>
+                                    </h2>
+                                    <div id="innerFiveThree" class="accordion-collapse collapse" data-bs-parent="#childFive" style="border-top: 1px solid black">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Well now it wouldn't be the last one that would be far too easy.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div>
-            <br><br><br>
-            <a class="btn btn-custom fall-back justify-content-center" href="index.html" style="margin-right: 4px">Wait I need to go back!</a>
-            <a class="btn btn-custom onwards justify-content-center" href="one.html">I think I understand</a>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <a class="btn btn-custom fall-back justify-content-center" href="index.html">Wait I need to go back!</a>
+            <br>
+            <p style="color: red">
+                where is the next button...?
+            </p>
         </div>
         <div>
         <br><br><br><br><br><br><br><br><br><br><p>Intentionally left blank.</p><br><br><br><br><br><br><br><br><br><br>
