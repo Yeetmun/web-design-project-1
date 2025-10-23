@@ -25,16 +25,19 @@
        .btn-custom {
             background-color: transparent;
             color: #000000;
-            border: 2px solid var(--bs-primary-text-emphasis);
+            border: 2px solid var(--bs-success);
             padding: 0.75rem 1.5rem;
             transition: all 0.3s ease-in-out;
             font-weight: bold;
         }
 
-        .btn-custom:hover {
-            background-color: #ccccf0;
-            color: #000;
-            border-color: #000000;
+        .onwards {
+            border: 2px solid var(--bs-success);
+        }
+
+        .onwards:hover {
+            background-color: rgba(var(--bs-success-rgb), 0.33);
+            color: #000000;
             transform: scale(1.03);
         }
     </style>
@@ -45,7 +48,7 @@
         <div style="margin-top: 5rem">
             <h1 class="animate__animated animate__fadeInDown title" style="padding-top: 4rem">Hey there welcome to my presentation!</h1>
             <h2 class="animate__animated animate__fadeInUp title" style="padding-bottom: 2rem">Today we're gonna learn three things about accessibility for websites!</h2>
-            <a class="btn btn-custom justify-content-center" href="one.html">Let's Go!</a>
+            <a class="btn btn-custom onwards justify-content-center" href="one.html">Onwards!</a>
         </div>
     </body>
 </html>

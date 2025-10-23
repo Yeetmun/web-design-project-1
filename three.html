@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/animate.min.css">
+        <link rel="stylesheet" href="/assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="/assets/bootstrap-5.3.8-dist/js/bootstrap.min.js" defer></script>
+        <title>Presenting Presentations</title>
+        <link rel="icon" href="/assets/icon.webp">
+        <script src="three.js"></script>
+    </head>
+    <style>
+        @font-face {
+            font-family: "Sans Hegarty";
+            src: url("/assets/fonts/BBHSansHegarty-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "dyslexia";
+            src: url("assets/fonts/OpenDyslexic3-Regular.ttf");
+        }
+
+        div {
+            text-align: center;
+        }
+        
+        p {
+            font-weight: 500
+        }
+
+        body {
+            color: #000033;
+        }
+
+        .title {
+            text-align: center;
+            font-family: Sans Hegarty;
+        }
+
+       .btn-custom {
+            background-color: transparent;
+            color: #000000;
+            border: 2px solid var(--bs-success);
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        .onwards {
+            border: 2px solid var(--bs-success);
+        }
+
+        .onwards:hover {
+            background-color: rgba(var(--bs-success-rgb), 0.33);
+            color: #000000;
+            transform: scale(1.03);
+        }
+
+        .fall-back {
+            border: 2px solid var(--bs-danger);
+        }
+
+        .fall-back:hover {
+            background-color: rgba(var(--bs-danger-rgb), 0.33);
+            color: #000000;
+            transform: scale(1.03);
+        }
+
+        .dyslexia {
+            border: 2px solid cornflowerblue
+        }
+
+        .dyslexia:hover {
+            background-color: rgba(100, 149, 237, 0.33);
+            color: #000000;
+            transform: scale(1.03);
+        }
+    </style>
+    <body style="background-color: AntiqueWhite;">
+        <div>
+            <img src="assets/missgordon.png">
+        </div>
+        <div>
+            <h1 class="animate__animated animate__zoomInDown title" style="padding-top: 4rem">Part 3:<br>Accessibility (The stereotypical one)</h1>
+        </div>
+        <br><br><br>
+        <div class="animate__animated animate__fadeIn" style="width: 700px; margin: auto; animation-delay: 0.5s">
+            <p>
+                Now that you've got your contrasts and importances all figured out, now it's time to get making! But wait, what if your user literally can't see the screen? Or have some kind of 
+                situation that prevents them from effectively viewing your site as is? That would be kind of embarassing wouldn't it? Unfortunately for you, you have to account for these types 
+                of people whether it be a vision impairment, device restrictions, location, or anything else that would make it more difficult to navigate a website. Let's take a look at two examples: 
+                dyslexia and visual impairment/devices that can't render things.
+                <br><br>
+                <button type="button" class="btn btn-custom dyslexia" onclick="comeForthMyChild()">Dyslexia</button>
+            </p>
+            <p id="dyslexia-paragraph" style="display: none">
+                Oh hey look there a button for dyslexia in the bottom left now, how neat! If you click it it will toggle the page between using a font designed for dyslexia and whatever font was chosen for the
+                site originally. This is good because people without dyslexia can choose not to have that font active as they do not need the added readability and can experience the site without modifications. 
+                And those who do have dyslexia don't have to stumble through your site trying to read the original font but instead read a dyslexic friendly font, even though it may mess up certain elements if 
+                they were precisely placed. Dyslexia doesn't affect a small amount of people either, roughly 20% of the global population is dyslexic, that's a lot of traffic you could attract!
+                <br><br>
+                <button type="button" class="btn btn-custom reader" onclick="oopsIBlewUpTheImage()">Alt Texts</button>
+            </p>
+            <p id="alttext-paragraph" style="display: none">
+
+            </p>
+        </div>
+        <div>
+            <br><br><br>
+            <a class="btn btn-custom fall-back justify-content-center" style="margin-right: 4px" href="two.html">Wait I need to go back!</a>
+            <a class="btn btn-custom onwards justify-content-center" href="conclude.html">That was cool</a>
+        </div>
+        <div>
+        <br><br><br><br><br><br><br><br><br><br><p>Intentionally left blank.</p><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </body>
+</html>
