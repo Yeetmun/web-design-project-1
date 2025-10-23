@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", event => {
 })
 
 function comeForthMyChild(){
-    if (document.getElementsByTagName("dyslexia-b")) {
+    if (document.getElementsByTagName("dyslexia-b").length > 0) {
         return false;
     } else {
         document.body.appendChild(document.createElement("dyslexia-b"));
@@ -72,6 +72,44 @@ function comeForthMyChild(){
     return false;
 }
 
-function oopsIBlewUpTheImage() {
-    
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function oopsIBlewUpTheImage() {
+    let haha = ["Oh hi Mrs. Gordon!", "Huh? What's happening?", "Wait, wait wait wait wait", "OH NO, MRS. GORDON WATCH OUT", "SHE CAN'T HEAR US NOOOOOOOOOOOOOOO"];
+    scrollTo({
+        top: 800,
+        left: 0,
+        behavior: "smooth"
+    })
+    let missgordon = document.getElementById("missgordon");
+    missgordon.style = "";
+    await sleep(2000);
+    let element = document.getElementById("alttext-paragraph");
+    element.style = "";
+    missgordon.classList.add("vanish");
+    haha.forEach((part, index) => {
+        setTimeout(() => {
+            console.log(index);
+            element.innerHTML=`${haha[index]}`
+        }, 4000*index);
+    });
+    missgordon.addEventListener("animationend", async () => {
+        await sleep(3000);
+        missgordon.src = "TOTALLYINVALIDLOLOLOL";
+        missgordon.classList.remove("vanish");
+        missgordon.style = "opacity: 1; padding-top: 75px; padding-bottom: 75px";
+        await sleep(2000);
+        element.innerHTML = "Oh hey, this isn't so bad"
+        element.classList.add("vanish");
+        element.style = "animation-duration: 6s";
+        element.addEventListener("animationend", async () => {
+            await sleep(2000);
+            element.classList.remove("vanish");
+            element.style = "opacity: 1";
+            element.innerHTML = `Alt texts! They're used whenever`;
+        })
+    })
+    return false;
 }
