@@ -91,10 +91,20 @@
             color: #000000;
             transform: scale(1.03);
         }
+
+        .reader {
+            border: 2px solid var(--bs-primary-text-emphasis);
+        }
+
+        .reader:hover{
+            background-color: rgba(var(--bs-primary-rgb), 0.4);
+            color: #000000;
+            transform: scale(1.03)
+        }
     </style>
     <body style="background-color: AntiqueWhite;">
         <div>
-            <img src="assets/missgordon.png">
+            <a href="https://aaps.schoology.com/course/7937184865/materials"><img src="assets/missgordon.png"></a>
         </div>
         <div>
             <h1 class="animate__animated animate__zoomInDown title" style="padding-top: 4rem">Part 3:<br>Accessibility (The stereotypical one)</h1>
@@ -117,7 +127,7 @@
                 <br><br>
                 <button type="button" class="btn btn-custom reader" onclick="oopsIBlewUpTheImage()">Alt Texts</button>
                 <br><br>
-                <img src="/assets/missgordon2.jpg" width="200px" id="missgordon" alt="THIS IS MISS GORDON" style="display: none">
+                <img src="/assets/missgordon2.jpg" width="200px" id="missgordon" alt="Portrait photo of Mrs. Gordon in the school library" style="display: none">
             </p>
             <p id="alttext-paragraph" style="display: none">
                 Oh hi Mrs. Gordon!
@@ -126,7 +136,7 @@
         <div>
             <br><br><br>
             <a class="btn btn-custom fall-back justify-content-center" style="margin-right: 4px" href="two.html">Wait I need to go back!</a>
-            <a class="btn btn-custom onwards justify-content-center" href="conclude.html">That was cool</a>
+            <a class="btn btn-custom onwards justify-content-center" href="conclude.html">That was pretty cool</a>
         </div>
         <div>
         <br><br><br><br><br><br><br><br><br><br><p>Intentionally left blank.</p><br><br><br><br><br><br><br><br><br><br>

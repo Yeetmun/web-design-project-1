@@ -103,12 +103,19 @@ async function oopsIBlewUpTheImage() {
         await sleep(2000);
         element.innerHTML = "Oh hey, this isn't so bad"
         element.classList.add("vanish");
-        element.style = "animation-duration: 6s";
+        element.style = "animation-duration: 6s; animation-timing-function: ease-in";
         element.addEventListener("animationend", async () => {
             await sleep(2000);
             element.classList.remove("vanish");
             element.style = "opacity: 1";
-            element.innerHTML = `Alt texts! They're used whenever`;
+            element.innerHTML = `Alt texts! That's what the little text thing next to the "missing image" icon is. They're used as an alternative for 
+            images in most places. The most common way you'll see alt text used is as a replacement for when the image fails to load. Since alt text is 
+            generally a description of the image, this allows users to still have an idea of what was there and can gain meaningful context for later in the content.
+            This property is not limited to just network issues though, screen readers (devices that read the screen out loud or translate it to braille for the
+            visually impaired) take advantage of this property and will read alt text which once again provides the meaningful context for the person using your site.
+            If alt texts weren't present, you'd run the risk that a blind person or someone with a bad connection could lose out on the information or context 
+            that the image would normally present, breaking the flow of content and making it harder to understand what's going on. It's quite easy to just ignore
+            adding alt texts but they should only be 1-2 sentences and will provide a lot of value to your website.`;
         })
     })
     return false;
